@@ -15,16 +15,18 @@ import rpg
 
 conan = rpg.Character('Conan', 'Human')
 galadriel = rpg.Mage('Galadriel', 'Elf')
+# galadriel.purse.__gold = 1000
 galadriel.purse.set(10, 5, 1)
 grok = rpg.Character('Grok', 'Orc', health=130)
 chest = rpg.Chest(['longsword', 'iron helmet'], 2, 50, 25)
 
-conan.battle(galadriel)
-galadriel.battle(grok)
+# conan.battle(galadriel)
+# galadriel.battle(grok)
 
 
 print(conan.__dict__)
 print(galadriel.__dict__)
+print(f'{galadriel.name} has {galadriel.purse.gold()} gold')
 
 # chest.loot(galadriel)
 

@@ -2,24 +2,27 @@ class Currency:
     def __init__(self, gold, silver, copper):
         self.set(gold, silver, copper)
 
+    def gold(self):
+        return self.__gold
+
     def set(self, gold, silver, copper):
-        self.gold = gold
-        self.silver = silver
-        self.copper = copper
+        self.__gold = gold
+        self.__silver = silver
+        self.__copper = copper
 
     def add(self, gold, silver, copper):
-        self.gold += gold
-        self.silver += silver
-        self.copper += copper
+        self.__gold += gold
+        self.__silver += silver
+        self.__copper += copper
 
     # Define a string representation of the object
     # Should return a Python expression that reconstructs the object
     # Intended for use by developers
     def __repr__(self):
-        return f'Currency(gold={self.gold}, silver={self.silver}, copper={self.copper})'
+        return f'Currency(gold={self.__gold}, silver={self.__silver}, copper={self.__copper})'
 
     def __str__(self):
-        return f'{self.gold}G {self.silver}S {self.copper}C'
+        return f'{self.__gold}G {self.__silver}S {self.__copper}C'
 
 
 class Character:
